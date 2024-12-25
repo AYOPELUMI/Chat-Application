@@ -3,61 +3,61 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'typography/typography.dart';
 
-class PreluraTheme {
+class CHatifyTheme {
   static ThemeData get lightMode => ThemeData(
         useMaterial3: false,
         brightness: Brightness.light,
         highlightColor: Colors.transparent,
         // splashFactory: Colors.transparent,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: PreluraColors.primaryColor,
-          primary: PreluraColors.activeColor,
+          seedColor: ChatifyColors.primaryColor,
+          primary: ChatifyColors.activeColor,
           secondary: const Color(0xFFD9D9D9),
-          tertiary: PreluraColors.primaryColor,
-          surface: PreluraColors.white,
-          onSecondary: PreluraColors.white,
-          onSurface: PreluraColors.primaryColor,
-          surfaceVariant: PreluraColors.surfaceVariantLight,
-          onSurfaceVariant: PreluraColors.onSurfaceVariantLight,
-          surfaceContainerHighest: PreluraColors.surfaceVariantLight,
-          onBackground: PreluraColors.greyLightColor,
+          tertiary: ChatifyColors.primaryColor,
+          surface: ChatifyColors.white,
+          onSecondary: ChatifyColors.white,
+          onSurface: ChatifyColors.primaryColor,
+          surfaceVariant: ChatifyColors.surfaceVariantLight,
+          onSurfaceVariant: ChatifyColors.onSurfaceVariantLight,
+          surfaceContainerHighest: ChatifyColors.surfaceVariantLight,
+          onBackground: ChatifyColors.greyLightColor,
         ),
         splashColor: Colors.transparent,
-        primaryColor: PreluraColors.primaryColor,
-        scaffoldBackgroundColor: PreluraColors.background,
-        primarySwatch: PreluraColors.vModelprimarySwatch,
+        primaryColor: ChatifyColors.primaryColor,
+        scaffoldBackgroundColor: ChatifyColors.background,
+        primarySwatch: ChatifyColors.vModelprimarySwatch,
         fontFamily: PreluraTypography1.primaryfontName,
-        indicatorColor: PreluraColors.primaryColor, //PreluraColors.mainColor,
-        dividerColor: PreluraColors.divideColor,
+        indicatorColor: ChatifyColors.primaryColor, //ChatifyColors.mainColor,
+        dividerColor: ChatifyColors.divideColor,
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: PreluraColors.primaryColor,
-          selectedItemColor: PreluraColors.primaryColor,
+          backgroundColor: ChatifyColors.primaryColor,
+          selectedItemColor: ChatifyColors.primaryColor,
         ),
         splashFactory: NoSplash.splashFactory,
         tabBarTheme: TabBarTheme(
-          unselectedLabelColor: PreluraColors.primaryColor.withOpacity(0.4),
-          labelColor: Colors.black, //PreluraColors.primaryColor,
+          unselectedLabelColor: ChatifyColors.primaryColor.withOpacity(0.4),
+          labelColor: Colors.black, //ChatifyColors.primaryColor,
 
           splashFactory: NoSplash.splashFactory,
         ),
         buttonTheme: ButtonThemeData(
           colorScheme: ColorScheme(
             brightness: Brightness.light,
-            primary: PreluraColors.activeColor,
-            onPrimary: PreluraColors.white,
-            secondary: PreluraColors.buttonBgColor,
-            tertiary: PreluraColors.white,
-            onSecondary: PreluraColors.primaryColorOld, //PreluraColors.primaryColor,
-            error: PreluraColors.primaryColorOld, // PreluraColors.primaryColor,
-            onError: PreluraColors.primaryColorOld, // PreluraColors.primaryColor,
-            surface: PreluraColors.primaryColorOld, // PreluraColors.primaryColor,
-            onSurface: PreluraColors.primaryColorOld, //PreluraColors.primaryColor,
+            primary: ChatifyColors.activeColor,
+            onPrimary: ChatifyColors.white,
+            secondary: ChatifyColors.buttonBgColor,
+            tertiary: ChatifyColors.white,
+            onSecondary: ChatifyColors.primaryColorOld, //ChatifyColors.primaryColor,
+            error: ChatifyColors.primaryColorOld, // ChatifyColors.primaryColor,
+            onError: ChatifyColors.primaryColorOld, // ChatifyColors.primaryColor,
+            surface: ChatifyColors.primaryColorOld, // ChatifyColors.primaryColor,
+            onSurface: ChatifyColors.primaryColorOld, //ChatifyColors.primaryColor,
           ),
         ),
         iconTheme: const IconThemeData(
-          color: Colors.black, // PreluraColors.primaryColor,
+          color: Colors.black, // ChatifyColors.primaryColor,
         ),
-        appBarTheme: const AppBarTheme(backgroundColor: PreluraColors.appBarBackgroundColor, elevation: 0),
+        appBarTheme: const AppBarTheme(backgroundColor: ChatifyColors.appBarBackgroundColor, elevation: 0),
         textTheme: const TextTheme(
                 // displayLarge: PreluraTypography1.normalTextStyle,
                 // displayMedium: PreluraTypography1.mediumTextStyle,
@@ -66,32 +66,32 @@ class PreluraTheme {
                 // titleMedium: PreluraTypography1.normalTextStyle,
                 // titleSmall: PreluraTypography1.normalTextStyle,
                 // labelSmall: ThemeData.light().textTheme.labelSmall?.copyWith(
-                //       color: Colors.black, // PreluraColors.primaryColor,
+                //       color: Colors.black, // ChatifyColors.primaryColor,
                 //       fontFamily: PreluraTypography1.primaryfontName,
                 //     ),
                 // labelMedium: ThemeData.light().textTheme.labelMedium?.copyWith(
-                //       color: Colors.black, // PreluraColors.primaryColor,
+                //       color: Colors.black, // ChatifyColors.primaryColor,
                 //       fontFamily: PreluraTypography1.primaryfontName,
                 //     ),
                 // labelLarge: ThemeData.light().textTheme.labelLarge?.copyWith(
-                //       color: Colors.black, // PreluraColors.primaryColor,
+                //       color: Colors.black, // ChatifyColors.primaryColor,
                 //       fontFamily: PreluraTypography1.primaryfontName,
                 //     ),
                 // // bodyLarge: PreluraTypography1.normalTextStyle,
                 // // bodyMedium: PreluraTypography1.mediumTextStyle,
                 // // bodySmall: PreluraTypography1.smallTextStyle,
                 // bodyLarge: ThemeData.light().textTheme.bodyLarge?.copyWith(
-                //       color: Colors.black, // PreluraColors.primaryColor,
+                //       color: Colors.black, // ChatifyColors.primaryColor,
                 //       fontFamily: PreluraTypography1.primaryfontName,
                 //     ),
                 // // ?.copyWith(color: Colors.amber),
                 // bodyMedium: ThemeData.light().textTheme.bodyMedium?.copyWith(
-                //       color: Colors.black, // PreluraColors.primaryColor,
+                //       color: Colors.black, // ChatifyColors.primaryColor,
                 //       fontFamily: PreluraTypography1.primaryfontName,
                 //     ),
                 // // ?.copyWith(color: Colors.amber),
                 // bodySmall: ThemeData.light().textTheme.bodySmall?.copyWith(
-                //       color: Colors.black, // PreluraColors.primaryColor,
+                //       color: Colors.black, // ChatifyColors.primaryColor,
                 //       fontSize: 10.sp,
                 //       fontFamily: PreluraTypography1.primaryfontName,
                 //     ),
@@ -103,28 +103,28 @@ class PreluraTheme {
           displayColor: Colors.black,
         ),
         radioTheme: const RadioThemeData(
-          fillColor: WidgetStatePropertyAll(PreluraColors.primaryColor),
+          fillColor: WidgetStatePropertyAll(ChatifyColors.primaryColor),
         ),
         chipTheme: ChipThemeData.fromDefaults(
-          primaryColor: PreluraColors.primaryColor,
+          primaryColor: ChatifyColors.primaryColor,
 
           //Definitely needs updating but for now just keep brown as default
-          secondaryColor: PreluraColors.primaryColor,
+          secondaryColor: ChatifyColors.primaryColor,
           labelStyle: const TextStyle(
-            color: PreluraColors.primaryColor,
+            color: ChatifyColors.primaryColor,
             fontFamily: PreluraTypography1.primaryfontName,
           ),
         ),
         bottomSheetTheme: ThemeData.dark().bottomSheetTheme.copyWith(
-              backgroundColor: PreluraColors.white,
+              backgroundColor: ChatifyColors.white,
             ),
         switchTheme: ThemeData.light().switchTheme.copyWith(
           trackColor: WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) {
             if (states.contains(WidgetState.selected)) {
-              return PreluraColors.primaryColor;
+              return ChatifyColors.primaryColor;
             }
             if (states.contains(WidgetState.disabled)) {
-              return PreluraColors.primaryColor.withOpacity(0.3);
+              return ChatifyColors.primaryColor.withOpacity(0.3);
             }
             return Colors.grey.withOpacity(.48);
           }),
@@ -140,25 +140,25 @@ class PreluraTheme {
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
-          fillColor: PreluraColors.greyColor.withOpacity(0.2),
+          fillColor: ChatifyColors.greyColor.withOpacity(0.2),
           filled: true,
           isDense: true,
           focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
-                color: PreluraColors.primaryColor,
+                color: ChatifyColors.primaryColor,
                 width: 1,
               ),
               borderRadius: BorderRadius.all(Radius.circular(8))),
-          disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: PreluraColors.greyColor.withOpacity(0.4), width: 1.5), borderRadius: const BorderRadius.all(Radius.circular(10))),
+          disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: ChatifyColors.greyColor.withOpacity(0.4), width: 1.5), borderRadius: const BorderRadius.all(Radius.circular(10))),
           border: OutlineInputBorder(
               borderSide: BorderSide(
-                color: PreluraColors.buttonBgColor,
+                color: ChatifyColors.buttonBgColor,
                 width: 1.5,
               ),
               borderRadius: const BorderRadius.all(Radius.circular(10))),
-          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: PreluraColors.buttonBgColor, width: 0), borderRadius: const BorderRadius.all(Radius.circular(10))),
-          focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: PreluraColors.buttonBgColor, width: 0), borderRadius: const BorderRadius.all(Radius.circular(10))),
-          errorBorder: OutlineInputBorder(borderSide: BorderSide(color: PreluraColors.buttonBgColor, width: 0), borderRadius: const BorderRadius.all(Radius.circular(8))),
+          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: ChatifyColors.buttonBgColor, width: 0), borderRadius: const BorderRadius.all(Radius.circular(10))),
+          focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: ChatifyColors.buttonBgColor, width: 0), borderRadius: const BorderRadius.all(Radius.circular(10))),
+          errorBorder: OutlineInputBorder(borderSide: BorderSide(color: ChatifyColors.buttonBgColor, width: 0), borderRadius: const BorderRadius.all(Radius.circular(8))),
         ),
       );
 
@@ -170,85 +170,85 @@ class PreluraTheme {
         highlightColor: Colors.transparent,
         // splashFactory: Colors.transparent,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: PreluraColors.darkPrimaryColor,
-          primary: PreluraColors.activeColor,
-          secondary: PreluraColors.darkPrimaryColor,
-          tertiary: PreluraColors.blueColor9D,
-          onSecondary: PreluraColors.darkPrimaryColor,
-          surface: PreluraColors.darkScaffoldBackround,
-          onSurface: PreluraColors.darkOnSurfaceColor,
-          surfaceVariant: PreluraColors.surfaceVariantLight.withOpacity(0.2),
-          surfaceContainerHighest: PreluraColors.surfaceVariantLight.withOpacity(0.2),
-          onSurfaceVariant: PreluraColors.onSurfaceVariantLight.withOpacity(0.25),
+          seedColor: ChatifyColors.darkPrimaryColor,
+          primary: ChatifyColors.activeColor,
+          secondary: ChatifyColors.darkPrimaryColor,
+          tertiary: ChatifyColors.blueColor9D,
+          onSecondary: ChatifyColors.darkPrimaryColor,
+          surface: ChatifyColors.darkScaffoldBackround,
+          onSurface: ChatifyColors.darkOnSurfaceColor,
+          surfaceVariant: ChatifyColors.surfaceVariantLight.withOpacity(0.2),
+          surfaceContainerHighest: ChatifyColors.surfaceVariantLight.withOpacity(0.2),
+          onSurfaceVariant: ChatifyColors.onSurfaceVariantLight.withOpacity(0.25),
         ),
-        scaffoldBackgroundColor: PreluraColors.darkScaffoldBackround,
+        scaffoldBackgroundColor: ChatifyColors.darkScaffoldBackround,
         visualDensity: VisualDensity.adaptivePlatformDensity,
 
-        dividerColor: PreluraColors.darkOnSurfaceColor.withOpacity(0.1),
+        dividerColor: ChatifyColors.darkOnSurfaceColor.withOpacity(0.1),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: PreluraColors.white.withOpacity(.8),
-          selectedItemColor: PreluraColors.darkSecondaryButtonColor,
-          unselectedItemColor: PreluraColors.white.withOpacity(.5),
-          unselectedIconTheme: IconThemeData(color: PreluraColors.white.withOpacity(.5)),
-          selectedIconTheme: const IconThemeData(color: PreluraColors.darkSecondaryButtonColor),
+          backgroundColor: ChatifyColors.white.withOpacity(.8),
+          selectedItemColor: ChatifyColors.darkSecondaryButtonColor,
+          unselectedItemColor: ChatifyColors.white.withOpacity(.5),
+          unselectedIconTheme: IconThemeData(color: ChatifyColors.white.withOpacity(.5)),
+          selectedIconTheme: const IconThemeData(color: ChatifyColors.darkSecondaryButtonColor),
         ),
         splashFactory: NoSplash.splashFactory,
         tabBarTheme: TabBarTheme(
-          unselectedLabelColor: PreluraColors.darkPrimaryColorWhite.withOpacity(.5),
-          labelColor: PreluraColors.white,
-          // indicatorColor: PreluraColors.darkSecondaryButtonColor,
-          indicatorColor: PreluraColors.white,
+          unselectedLabelColor: ChatifyColors.darkPrimaryColorWhite.withOpacity(.5),
+          labelColor: ChatifyColors.white,
+          // indicatorColor: ChatifyColors.darkSecondaryButtonColor,
+          indicatorColor: ChatifyColors.white,
           splashFactory: NoSplash.splashFactory,
         ),
-        primaryColor: PreluraColors.darkPrimaryColorWhite,
-        // primarySwatch: PreluraColors.vModelprimarySwatch,
-        indicatorColor: PreluraColors.white,
+        primaryColor: ChatifyColors.darkPrimaryColorWhite,
+        // primarySwatch: ChatifyColors.vModelprimarySwatch,
+        indicatorColor: ChatifyColors.white,
         // fontFamily: PreluraDarkTheme.primaryfontName,
         switchTheme: ThemeData.light().switchTheme.copyWith(
           trackColor: WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) {
             if (states.contains(WidgetState.selected)) {
-              return PreluraColors.primaryColor;
+              return ChatifyColors.primaryColor;
             }
             if (states.contains(WidgetState.disabled)) {
-              return PreluraColors.primaryColor.withOpacity(0.3);
+              return ChatifyColors.primaryColor.withOpacity(0.3);
             }
             return Colors.grey.withOpacity(.48);
           }),
         ),
         buttonTheme: ButtonThemeData(
-          buttonColor: PreluraColors.darkButtonColor,
-          disabledColor: PreluraColors.darkSecondaryButtonColor,
+          buttonColor: ChatifyColors.darkButtonColor,
+          disabledColor: ChatifyColors.darkSecondaryButtonColor,
           colorScheme: ColorScheme(
             brightness: Brightness.dark,
-            primary: PreluraColors.darkButtonColor,
-            onPrimary: PreluraColors.white,
-            // secondary: PreluraColors.darkSecondaryButtonColor,
-            secondary: PreluraColors.greyColor.withOpacity(0.2),
-            onSecondary: PreluraColors.white,
-            tertiary: PreluraColors.darkSecondaryButtonColor,
-            onTertiary: PreluraColors.white,
-            error: PreluraColors.darkButtonColor,
-            onError: PreluraColors.darkButtonColor,
-            surface: PreluraColors.darkButtonColor,
-            onSurface: PreluraColors.darkButtonColor,
+            primary: ChatifyColors.darkButtonColor,
+            onPrimary: ChatifyColors.white,
+            // secondary: ChatifyColors.darkSecondaryButtonColor,
+            secondary: ChatifyColors.greyColor.withOpacity(0.2),
+            onSecondary: ChatifyColors.white,
+            tertiary: ChatifyColors.darkSecondaryButtonColor,
+            onTertiary: ChatifyColors.white,
+            error: ChatifyColors.darkButtonColor,
+            onError: ChatifyColors.darkButtonColor,
+            surface: ChatifyColors.darkButtonColor,
+            onSurface: ChatifyColors.darkButtonColor,
           ),
         ),
         textSelectionTheme: const TextSelectionThemeData(
           // cursorColor: Colors.yellow,
-          selectionColor: PreluraColors.darkSecondaryButtonColor,
-          selectionHandleColor: PreluraColors.darkSecondaryButtonColor,
+          selectionColor: ChatifyColors.darkSecondaryButtonColor,
+          selectionHandleColor: ChatifyColors.darkSecondaryButtonColor,
         ),
         navigationBarTheme: NavigationBarThemeData(
             iconTheme: WidgetStateProperty.all(
           IconThemeData(
-            color: PreluraColors.white.withOpacity(.6),
+            color: ChatifyColors.white.withOpacity(.6),
           ),
         )),
         dialogTheme: const DialogTheme(
-          backgroundColor: PreluraColors.darkScaffoldBackround,
+          backgroundColor: ChatifyColors.darkScaffoldBackround,
         ),
-        appBarTheme: const AppBarTheme(backgroundColor: PreluraColors.blackScaffoldBackround, elevation: 0),
-        iconTheme: const IconThemeData(color: PreluraColors.darkPrimaryColorWhite),
+        appBarTheme: const AppBarTheme(backgroundColor: ChatifyColors.blackScaffoldBackround, elevation: 0),
+        iconTheme: const IconThemeData(color: ChatifyColors.darkPrimaryColorWhite),
         textTheme: const TextTheme(
                 // displayLarge: PreluraDarkTheme.normalTextStyle,
                 // displayMedium: PreluraDarkTheme.mediumTextStyle,
@@ -260,38 +260,38 @@ class PreluraTheme {
                 // bodyMedium: PreluraDarkTheme.mediumTextStyle,
                 // bodySmall: PreluraDarkTheme.smallTextStyle,
                 // bodyLarge: ThemeData.dark().textTheme.bodyLarge?.copyWith(
-                //       color: PreluraColors.darkOnPrimaryColor,
+                //       color: ChatifyColors.darkOnPrimaryColor,
                 //       fontFamily: PreluraDarkTheme.primaryfontName,
                 //     ),
                 // bodyMedium: ThemeData.dark().textTheme.bodyMedium?.copyWith(
-                //       color: PreluraColors.darkOnPrimaryColor,
+                //       color: ChatifyColors.darkOnPrimaryColor,
                 //       fontFamily: PreluraDarkTheme.primaryfontName,
                 //     ),
                 // bodySmall: ThemeData.dark().textTheme.bodySmall?.copyWith(
-                //       color: PreluraColors.darkOnPrimaryColor,
+                //       color: ChatifyColors.darkOnPrimaryColor,
                 //       fontFamily: PreluraDarkTheme.primaryfontName,
                 //     ),
                 )
             .apply(
           fontFamily: PreluraTypography1.primaryfontName,
-          bodyColor: PreluraColors.darkOnPrimaryColor,
-          displayColor: PreluraColors.darkOnPrimaryColor,
+          bodyColor: ChatifyColors.darkOnPrimaryColor,
+          displayColor: ChatifyColors.darkOnPrimaryColor,
         ),
         cardTheme: ThemeData.dark().cardTheme.copyWith(
-              // color: PreluraColors.darkPrimaryColor,
-              color: PreluraColors.darkThemeCardColor,
+              // color: ChatifyColors.darkPrimaryColor,
+              color: ChatifyColors.darkThemeCardColor,
               elevation: 5,
               // color: Colors.grey.withOpacity(0.1),
             ),
         bottomSheetTheme: ThemeData.dark().bottomSheetTheme.copyWith(
-              backgroundColor: PreluraColors.darkScaffoldBackround,
+              backgroundColor: ChatifyColors.darkScaffoldBackround,
             ),
         chipTheme: ChipThemeData.fromDefaults(
           brightness: Brightness.dark,
-          // primaryColor: PreluraColors.darkSecondaryButtonColor,
-          secondaryColor: PreluraColors.darkSecondaryButtonColor,
+          // primaryColor: ChatifyColors.darkSecondaryButtonColor,
+          secondaryColor: ChatifyColors.darkSecondaryButtonColor,
           labelStyle: const TextStyle(
-            color: PreluraColors.darkSecondaryButtonColor,
+            color: ChatifyColors.darkSecondaryButtonColor,
             fontFamily: PreluraDarkTheme.primaryfontName,
           ),
         ),
@@ -299,10 +299,10 @@ class PreluraTheme {
         //   trackColor:
         //       WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) {
         //     if (states.contains(WidgetState.selected)) {
-        //       return PreluraColors.darkSecondaryButtonColor;
+        //       return ChatifyColors.darkSecondaryButtonColor;
         //     }
         //     if (states.contains(WidgetState.disabled)) {
-        //       return PreluraColors.darkSecondaryButtonColor.withOpacity(0.3);
+        //       return ChatifyColors.darkSecondaryButtonColor.withOpacity(0.3);
         //     }
         //     return Colors.grey.withOpacity(.48);
         //   }),
@@ -314,25 +314,25 @@ class PreluraTheme {
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
-          fillColor: PreluraColors.greyColor.withOpacity(0.2),
+          fillColor: ChatifyColors.greyColor.withOpacity(0.2),
           filled: true,
           isDense: true,
           focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
-                color: PreluraColors.darkButtonColor,
+                color: ChatifyColors.darkButtonColor,
                 width: 1,
               ),
               borderRadius: BorderRadius.all(Radius.circular(8))),
-          disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: PreluraColors.greyColor.withOpacity(0.4), width: 1.5), borderRadius: const BorderRadius.all(Radius.circular(10))),
+          disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: ChatifyColors.greyColor.withOpacity(0.4), width: 1.5), borderRadius: const BorderRadius.all(Radius.circular(10))),
           border: OutlineInputBorder(
               borderSide: BorderSide(
-                color: PreluraColors.greyColor.withOpacity(0.2),
+                color: ChatifyColors.greyColor.withOpacity(0.2),
                 width: 1.5,
               ),
               borderRadius: const BorderRadius.all(Radius.circular(10))),
-          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: PreluraColors.greyColor.withOpacity(0.2), width: 0), borderRadius: const BorderRadius.all(Radius.circular(10))),
-          focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: PreluraColors.greyColor.withOpacity(0.2), width: 0), borderRadius: const BorderRadius.all(Radius.circular(10))),
-          errorBorder: OutlineInputBorder(borderSide: BorderSide(color: PreluraColors.greyColor.withOpacity(0.2), width: 0), borderRadius: const BorderRadius.all(Radius.circular(8))),
+          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: ChatifyColors.greyColor.withOpacity(0.2), width: 0), borderRadius: const BorderRadius.all(Radius.circular(10))),
+          focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: ChatifyColors.greyColor.withOpacity(0.2), width: 0), borderRadius: const BorderRadius.all(Radius.circular(10))),
+          errorBorder: OutlineInputBorder(borderSide: BorderSide(color: ChatifyColors.greyColor.withOpacity(0.2), width: 0), borderRadius: const BorderRadius.all(Radius.circular(8))),
         ),
       );
 
@@ -342,53 +342,53 @@ class PreluraTheme {
           brightness: Brightness.dark,
           splashColor: Colors.transparent,
           // colorScheme:
-          // const ColorScheme.dark(primary: PreluraColors.darkScaffoldBackround),
+          // const ColorScheme.dark(primary: ChatifyColors.darkScaffoldBackround),
           colorScheme: ColorScheme.fromSeed(
             // seedColor: const Color.fromRGBO(55, 71, 79, 1),
-            seedColor: PreluraColors.darkPrimaryColor,
-            primary: PreluraColors.activeColor,
-            onPrimary: PreluraColors.primaryColor,
+            seedColor: ChatifyColors.darkPrimaryColor,
+            primary: ChatifyColors.activeColor,
+            onPrimary: ChatifyColors.primaryColor,
 
-            secondary: PreluraColors.white,
-            tertiary: PreluraColors.blueColor9D,
-            onSecondary: PreluraColors.darkPrimaryColor,
-            surface: PreluraColors.modalBgColorBlackMode,
-            onSurface: PreluraColors.darkOnSurfaceColor,
-            surfaceVariant: PreluraColors.surfaceVariantLight.withOpacity(0.2),
-            surfaceContainerHighest: PreluraColors.surfaceVariantLight.withOpacity(0.2),
-            onSurfaceVariant: PreluraColors.onSurfaceVariantLight.withOpacity(0.25),
+            secondary: ChatifyColors.white,
+            tertiary: ChatifyColors.blueColor9D,
+            onSecondary: ChatifyColors.darkPrimaryColor,
+            surface: ChatifyColors.modalBgColorBlackMode,
+            onSurface: ChatifyColors.darkOnSurfaceColor,
+            surfaceVariant: ChatifyColors.surfaceVariantLight.withOpacity(0.2),
+            surfaceContainerHighest: ChatifyColors.surfaceVariantLight.withOpacity(0.2),
+            onSurfaceVariant: ChatifyColors.onSurfaceVariantLight.withOpacity(0.25),
           ),
           dialogTheme: const DialogTheme(
             backgroundColor: Color.fromARGB(255, 27, 27, 27),
           ),
-          scaffoldBackgroundColor: PreluraColors.darkScaffoldBackround,
+          scaffoldBackgroundColor: ChatifyColors.darkScaffoldBackround,
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          dividerColor: PreluraColors.darkOnSurfaceColor.withOpacity(0.3),
+          dividerColor: ChatifyColors.darkOnSurfaceColor.withOpacity(0.3),
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
-            backgroundColor: PreluraColors.white.withOpacity(.8),
-            selectedItemColor: PreluraColors.white,
-            unselectedItemColor: PreluraColors.white.withOpacity(.5),
-            unselectedIconTheme: IconThemeData(color: PreluraColors.white.withOpacity(.5)),
-            selectedIconTheme: const IconThemeData(color: PreluraColors.darkSecondaryButtonColor),
+            backgroundColor: ChatifyColors.white.withOpacity(.8),
+            selectedItemColor: ChatifyColors.white,
+            unselectedItemColor: ChatifyColors.white.withOpacity(.5),
+            unselectedIconTheme: IconThemeData(color: ChatifyColors.white.withOpacity(.5)),
+            selectedIconTheme: const IconThemeData(color: ChatifyColors.darkSecondaryButtonColor),
           ),
-          tabBarTheme: TabBarTheme(unselectedLabelColor: PreluraColors.darkPrimaryColorWhite.withOpacity(.5), labelColor: PreluraColors.grey, indicatorColor: PreluraColors.white),
-          primaryColor: PreluraColors.darkPrimaryColorWhite,
-          indicatorColor: PreluraColors.white,
+          tabBarTheme: TabBarTheme(unselectedLabelColor: ChatifyColors.darkPrimaryColorWhite.withOpacity(.5), labelColor: ChatifyColors.grey, indicatorColor: ChatifyColors.white),
+          primaryColor: ChatifyColors.darkPrimaryColorWhite,
+          indicatorColor: ChatifyColors.white,
           buttonTheme: ButtonThemeData(
-            buttonColor: PreluraColors.blackButtonColor,
-            disabledColor: PreluraColors.darkSecondaryButtonColor,
+            buttonColor: ChatifyColors.blackButtonColor,
+            disabledColor: ChatifyColors.darkSecondaryButtonColor,
             colorScheme: ColorScheme(
               brightness: Brightness.dark,
-              primary: PreluraColors.blackButtonColor,
-              onPrimary: PreluraColors.white,
-              secondary: PreluraColors.greyColor.withOpacity(0.2),
-              onSecondary: PreluraColors.white,
-              tertiary: PreluraColors.darkSecondaryButtonColor,
-              onTertiary: PreluraColors.white,
-              error: PreluraColors.blackButtonColor,
-              onError: PreluraColors.blackButtonColor,
-              surface: PreluraColors.blackButtonColor,
-              onSurface: PreluraColors.blackButtonColor,
+              primary: ChatifyColors.blackButtonColor,
+              onPrimary: ChatifyColors.white,
+              secondary: ChatifyColors.greyColor.withOpacity(0.2),
+              onSecondary: ChatifyColors.white,
+              tertiary: ChatifyColors.darkSecondaryButtonColor,
+              onTertiary: ChatifyColors.white,
+              error: ChatifyColors.blackButtonColor,
+              onError: ChatifyColors.blackButtonColor,
+              surface: ChatifyColors.blackButtonColor,
+              onSurface: ChatifyColors.blackButtonColor,
             ),
           ),
           timePickerTheme: const TimePickerThemeData(
@@ -400,20 +400,20 @@ class PreluraTheme {
           ),
           textSelectionTheme: const TextSelectionThemeData(
             // cursorColor: Colors.yellow,
-            selectionColor: PreluraColors.darkSecondaryButtonColor,
-            selectionHandleColor: PreluraColors.darkSecondaryButtonColor,
+            selectionColor: ChatifyColors.darkSecondaryButtonColor,
+            selectionHandleColor: ChatifyColors.darkSecondaryButtonColor,
           ),
           navigationBarTheme: NavigationBarThemeData(
               iconTheme: WidgetStateProperty.all(
             IconThemeData(
-              color: PreluraColors.white.withOpacity(.6),
+              color: ChatifyColors.white.withOpacity(.6),
             ),
           )),
           appBarTheme: AppBarTheme(
-            backgroundColor: PreluraColors.blackUpdated,
+            backgroundColor: ChatifyColors.blackUpdated,
             elevation: 0,
           ),
-          iconTheme: const IconThemeData(color: PreluraColors.darkPrimaryColorWhite),
+          iconTheme: const IconThemeData(color: ChatifyColors.darkPrimaryColorWhite),
           textTheme: TextTheme(
             displayLarge: PreluraDarkTheme.normalTextStyle,
             displayMedium: PreluraDarkTheme.mediumTextStyle,
@@ -422,41 +422,41 @@ class PreluraTheme {
             titleMedium: PreluraDarkTheme.normalTextStyle,
             titleSmall: PreluraDarkTheme.normalTextStyle,
             bodyLarge: ThemeData.dark().textTheme.bodyLarge?.copyWith(
-                  color: PreluraColors.darkOnPrimaryColor,
+                  color: ChatifyColors.darkOnPrimaryColor,
                   fontFamily: PreluraDarkTheme.primaryfontName,
                 ),
             bodyMedium: ThemeData.dark().textTheme.bodyMedium?.copyWith(
-                  color: PreluraColors.darkOnPrimaryColor,
+                  color: ChatifyColors.darkOnPrimaryColor,
                   fontFamily: PreluraDarkTheme.primaryfontName,
                 ),
             bodySmall: ThemeData.dark().textTheme.bodySmall?.copyWith(
-                  color: PreluraColors.darkOnPrimaryColor,
+                  color: ChatifyColors.darkOnPrimaryColor,
                   fontFamily: PreluraDarkTheme.primaryfontName,
                 ),
           ),
           cardTheme: CardTheme(
-            color: PreluraColors.blackCardColor,
-            surfaceTintColor: PreluraColors.blackCardColor,
+            color: ChatifyColors.blackCardColor,
+            surfaceTintColor: ChatifyColors.blackCardColor,
             elevation: 5,
           ),
           bottomSheetTheme: ThemeData.dark().bottomSheetTheme.copyWith(
-                backgroundColor: PreluraColors.modalBgColorBlackMode,
+                backgroundColor: ChatifyColors.modalBgColorBlackMode,
               ),
           chipTheme: ChipThemeData.fromDefaults(
             brightness: Brightness.dark,
-            secondaryColor: PreluraColors.darkSecondaryButtonColor,
+            secondaryColor: ChatifyColors.darkSecondaryButtonColor,
             labelStyle: const TextStyle(
-              color: PreluraColors.darkSecondaryButtonColor,
+              color: ChatifyColors.darkSecondaryButtonColor,
               fontFamily: PreluraTypography1.primaryfontName,
             ),
           ),
           switchTheme: ThemeData.dark().switchTheme.copyWith(
             trackColor: WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) {
               if (states.contains(WidgetState.selected)) {
-                return PreluraColors.darkSecondaryButtonColor;
+                return ChatifyColors.darkSecondaryButtonColor;
               }
               if (states.contains(WidgetState.disabled)) {
-                return PreluraColors.darkSecondaryButtonColor.withOpacity(0.3);
+                return ChatifyColors.darkSecondaryButtonColor.withOpacity(0.3);
               }
               return Colors.grey.withOpacity(.48);
             }),
@@ -471,7 +471,7 @@ class PreluraTheme {
             color: Colors.white,
           ),
           inputDecorationTheme: InputDecorationTheme(
-            fillColor: PreluraColors.greyColor.withOpacity(0.2),
+            fillColor: ChatifyColors.greyColor.withOpacity(0.2),
             filled: true,
             isDense: true,
             focusedBorder: const OutlineInputBorder(

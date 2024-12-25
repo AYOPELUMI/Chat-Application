@@ -1,11 +1,12 @@
+import 'package:chat_application/res/hex_color.dart';
 import 'package:flutter/material.dart';
-import 'package:prelura_app/core/utils/hex_color.dart';
 
 class ChatifyColors {
   ChatifyColors._();
   static const Color pinkColor = Colors.green;
   static const Color darkPrimaryColorWhite = Color(0xFFF0F3F6);
-  static const Color primaryColor = Colors.purple; //Color(0xFF543B3A);
+  static const Color primaryColor =
+      Color.fromARGB(255, 27, 142, 250); //Color(0xFF543B3A);
   static const Color primaryColorOld = Colors.purple;
   static const Color bottomNavIndicatiorColor = Color(0xFFFD4A40);
   static const Color appBarBackgroundColor = Color(0xFFF0F3FF);
@@ -15,7 +16,7 @@ class ChatifyColors {
   static const Color darkButtonColor = Colors.purple; //background: #37474F;
   static Color blackUpdated = '0C0F12'.fromHex;
   static Color blackButtonColorUpdated = '1A4577'.fromHex;
-  static const Color activeColor = Colors.purple;
+  static const Color activeColor = Color.fromARGB(255, 27, 142, 250);
 
   static const Color darkSecondaryButtonColor = Color(0xFF82909D);
   static const Color appBarShadowColor = Color(0xFFEEEEEE);
