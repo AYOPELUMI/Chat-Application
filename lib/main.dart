@@ -1,14 +1,15 @@
 import 'package:chat_application/pages/Authentication/login_page.dart';
 import 'package:chat_application/res/theme.dart';
+import 'package:chat_application/router/router.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
 
-import 'res/firebase_options.dart';
+import 'firebase_options.dart';
 
 void main() async {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -23,11 +24,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(builder:
         (BuildContext context, Orientation orientation, DeviceType deviceType) {
-      return MaterialApp(
+      return MaterialApp.router(
         title: 'Flutter Demo',
         theme: CHatifyTheme.lightMode,
         darkTheme: CHatifyTheme.darkTheme,
-        home: LoginPage(),
+        routerConfig: AppRouter().config(
+          navigatorObservers: () => [MyObserver()],
+        ),
       );
     });
   }

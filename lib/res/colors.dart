@@ -7,13 +7,14 @@ class ChatifyColors {
   static const Color darkPrimaryColorWhite = Color(0xFFF0F3F6);
   static const Color primaryColor =
       Color.fromARGB(255, 27, 142, 250); //Color(0xFF543B3A);
-  static const Color primaryColorOld = Colors.purple;
+  static const Color primaryColorOld = Color.fromARGB(255, 27, 142, 250);
   static const Color bottomNavIndicatiorColor = Color(0xFFFD4A40);
   static const Color appBarBackgroundColor = Color(0xFFF0F3FF);
   static const Color darkIconColor = Color(0xFFFFFFFF);
   static const Color darkScaffoldBackround = Color(0xFF1e1e1e);
   static const Color blackScaffoldBackround = Colors.black;
-  static const Color darkButtonColor = Colors.purple; //background: #37474F;
+  static const Color darkButtonColor =
+      Color.fromARGB(255, 27, 142, 250); //background: #37474F;
   static Color blackUpdated = '0C0F12'.fromHex;
   static Color blackButtonColorUpdated = '1A4577'.fromHex;
   static const Color activeColor = Color.fromARGB(255, 27, 142, 250);

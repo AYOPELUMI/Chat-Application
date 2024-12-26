@@ -35,26 +35,28 @@ class UIConstants {
       BorderRadius? borderRadius,
       int? minLines}) {
     return InputDecoration(
-      constraints: BoxConstraints(
-        minHeight: minLines != null ? minLines! * 24.0 : 48.0,
-        maxHeight: minLines != null ? double.infinity : 48.0,
-      ),
+      // constraints: BoxConstraints(
+      //   minHeight: minLines != null ? minLines! * 24.0 : 50.0,
+      //   maxHeight: minLines != null ? double.infinity : 50.0,
+      // ),
+      errorStyle: Theme.of(context)
+          .textTheme
+          .bodySmall
+          ?.copyWith(color: ChatifyColors.error, fontSize: 10.sp, height: 0.9),
       label: labelText != null
           ? Text(labelText,
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  fontSize: 16, height: 1.7, color: ChatifyColors.activeColor))
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(fontSize: 11.sp, color: ChatifyColors.activeColor))
           : null,
-      floatingLabelAlignment: FloatingLabelAlignment.start,
-      floatingLabelStyle: Theme.of(context)
-          .textTheme
-          .bodyMedium!
-          .copyWith(fontSize: 19, color: ChatifyColors.black),
       enabled: enabled,
       fillColor: Theme.of(context).buttonTheme.colorScheme!.secondary,
       filled: false,
       isDense: true,
       isCollapsed: isCollapsed,
       alignLabelWithHint: true,
+      floatingLabelBehavior: FloatingLabelBehavior.auto,
       suffixIcon: suffixIcon,
       suffix: suffixWidget,
       counterText: '',
@@ -71,7 +73,7 @@ class UIConstants {
             fontSize: 12.sp,
           ),
       hintText: hintText,
-      helperText: helperText,
+      helperText: "",
       hintStyle: hintStyle ??
           Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: Theme.of(context)
@@ -79,38 +81,33 @@ class UIConstants {
                     .bodyMedium
                     ?.color
                     ?.withOpacity(0.5),
-                fontSize: 14,
-                height: 1.7,
+                fontSize: 12.sp,
               ),
-      contentPadding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+      contentPadding: const EdgeInsets.fromLTRB(12, 12, 12, 7),
       border: InputBorder.none,
       focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: context.isDarkMode
-                ? ChatifyColors.white.withOpacity(0.5)
-                : ChatifyColors.white.withOpacity(0.5),
-            width: 1.25,
-          ),
-          borderRadius:
-              borderRadius ?? const BorderRadius.all(Radius.circular(8))),
+        borderSide: BorderSide(
+          color: context.isDarkMode
+              ? ChatifyColors.white.withOpacity(0.5)
+              : ChatifyColors.white.withOpacity(0.5),
+          width: 1.25,
+        ),
+      ),
       enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: context.isDarkMode
-                ? ChatifyColors.white.withOpacity(0.5)
-                : Theme.of(context)
-                    .dividerColor, //Theme.of(context).primaryColor,
-            width: 1.25,
-          ),
-          borderRadius:
-              borderRadius ?? const BorderRadius.all(Radius.circular(8))),
+        borderSide: BorderSide(
+          color: context.isDarkMode
+              ? ChatifyColors.white.withOpacity(0.5)
+              : Theme.of(context)
+                  .dividerColor, //Theme.of(context).primaryColor,
+          width: 1.25,
+        ),
+      ),
       focusedErrorBorder: UnderlineInputBorder(
-          borderSide: const BorderSide(color: Colors.red, width: 1.25),
-          borderRadius:
-              borderRadius ?? const BorderRadius.all(Radius.circular(8))),
+        borderSide: const BorderSide(color: Colors.red, width: 1.25),
+      ),
       errorBorder: UnderlineInputBorder(
-          borderSide: const BorderSide(color: Colors.red, width: 1.25),
-          borderRadius:
-              borderRadius ?? const BorderRadius.all(Radius.circular(8))),
+        borderSide: const BorderSide(color: Colors.red, width: 1.25),
+      ),
     );
   }
 }

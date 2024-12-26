@@ -19,7 +19,7 @@ class ChatifyTextField extends ConsumerStatefulWidget {
   final Function()? onTap;
   final int? maxLength;
   final TextEditingController? controller;
-  final String? Function(String?)? validator;
+  final Function(String?, String?) validator;
   final bool shouldReadOnly;
   final double? minWidth;
   final Widget? suffixIcon;
@@ -31,6 +31,7 @@ class ChatifyTextField extends ConsumerStatefulWidget {
   final int? maxLines;
   final TextInputAction? textInputAction;
   final bool isDescription;
+  final bool exemptFromValdation;
 
   /// formats the textfeild to a password version
   final bool isPassword;
@@ -48,7 +49,7 @@ class ChatifyTextField extends ConsumerStatefulWidget {
       this.hintText,
       this.maxLength,
       this.controller,
-      this.validator,
+      required this.validator,
       this.textCapitalization,
       this.shouldReadOnly = false,
       trailing,
@@ -62,6 +63,7 @@ class ChatifyTextField extends ConsumerStatefulWidget {
       this.isPassword = false,
       this.maxLines = 1,
       this.textInputAction,
+      this.exemptFromValdation = false,
       this.isDescription = false});
 
   @override
@@ -104,10 +106,10 @@ class _VWidgetsLoginTextFieldState extends ConsumerState<ChatifyTextField> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
         ),
-        constraints: BoxConstraints(
-          minHeight: widget.minLines != null ? widget.minLines! * 20.0 : 50.0,
-          maxHeight: widget.minLines != null ? double.infinity : 50.0,
-        ),
+        // constraints: BoxConstraints(
+        //   minHeight: widget.minLines != null ? widget.minLines! * 20.0 : 50.0,
+        //   maxHeight: widget.minLines != null ? double.infinity : 50.0,
+        // ),
         child: GestureDetector(
           onTap: widget.onTap,
           child: Container(
@@ -115,11 +117,11 @@ class _VWidgetsLoginTextFieldState extends ConsumerState<ChatifyTextField> {
             width: widget.minWidth ?? 100.0.w,
 
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
               color: Theme.of(context).scaffoldBackgroundColor,
             ),
             child: TextFormField(
               textInputAction: widget.textInputAction,
+
               autocorrect: false,
               enableSuggestions: false,
               minLines: widget.minLines ?? 1,
@@ -154,7 +156,11 @@ class _VWidgetsLoginTextFieldState extends ConsumerState<ChatifyTextField> {
               // },
               maxLengthEnforcement: MaxLengthEnforcement.enforced,
               autovalidateMode: AutovalidateMode.onUserInteraction,
-              validator: widget.validator,
+              validator: (value) {
+                return !widget.exemptFromValdation
+                    ? widget.validator(widget.label, value)
+                    : null;
+              },
               // validator: (val) {
               //   if (widget.validator == null) return;
               //   if (val == null || val.isEmpty) {
@@ -169,7 +175,7 @@ class _VWidgetsLoginTextFieldState extends ConsumerState<ChatifyTextField> {
               //   return null;
               // },
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontSize: 14,
+                    fontSize: 12.sp,
                   ),
               readOnly: widget.shouldReadOnly,
               decoration: UIConstants.instance
@@ -187,7 +193,6 @@ class _VWidgetsLoginTextFieldState extends ConsumerState<ChatifyTextField> {
                   .copyWith(
                     focusedBorder: showGradient
                         ? UnderlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide(
                                 color: ChatifyColors.primaryColor, width: 1.25),
                           )
