@@ -58,50 +58,63 @@ class AppButton extends StatelessWidget {
         ),
         height: height ?? 50,
         width: width,
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: textWidget != null
-              ? centerText == true
-                  ? MainAxisAlignment.center
-                  : MainAxisAlignment.start
-              : MainAxisAlignment.center,
-          children: [
-            textWidget ?? const SizedBox.shrink(),
-            textWidget != null
-                ? Text(
-                    text!,
-                    style: TextStyle(
-                      fontSize: fontSize ?? 10.sp,
-                      color: textColor ??
-                          (isDarkMode
-                              ? isDisabled
-                                  ? ChatifyColors.white.withOpacity(0.5)
-                                  : ChatifyColors.white
-                              : bgColor != null
-                                  ? ChatifyColors.activeColor
-                                  : ChatifyColors.white),
-                      fontWeight: FontWeight.w800,
-                    ),
-                  )
-                : Center(
-                    child: Text(
-                      text!,
-                      style: TextStyle(
-                        fontSize: fontSize ?? 10.sp,
-                        color: textColor ??
-                            (isDarkMode
-                                ? isDisabled
-                                    ? ChatifyColors.white.withOpacity(0.5)
-                                    : ChatifyColors.white
-                                : bgColor != null
-                                    ? ChatifyColors.activeColor
-                                    : ChatifyColors.white),
-                        fontWeight: FontWeight.w800,
-                      ),
+        child: loading
+            ? Center(
+                child: SizedBox(
+                  height: 20, // Set the height to ensure a circle
+                  width: 20, // Set the width to ensure a circle
+                  child: CircularProgressIndicator(
+                    strokeWidth: 2, // Adjust for a thinner or thicker circle
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                      Colors.white, // Change to your desired color
                     ),
                   ),
-          ],
-        ),
+                ),
+              )
+            : Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: textWidget != null
+                    ? centerText == true
+                        ? MainAxisAlignment.center
+                        : MainAxisAlignment.start
+                    : MainAxisAlignment.center,
+                children: [
+                  textWidget ?? const SizedBox.shrink(),
+                  textWidget != null
+                      ? Text(
+                          text!,
+                          style: TextStyle(
+                            fontSize: fontSize ?? 10.sp,
+                            color: textColor ??
+                                (isDarkMode
+                                    ? isDisabled
+                                        ? ChatifyColors.white.withOpacity(0.5)
+                                        : ChatifyColors.white
+                                    : bgColor != null
+                                        ? ChatifyColors.activeColor
+                                        : ChatifyColors.white),
+                            fontWeight: FontWeight.w800,
+                          ),
+                        )
+                      : Center(
+                          child: Text(
+                            text!,
+                            style: TextStyle(
+                              fontSize: fontSize ?? 10.sp,
+                              color: textColor ??
+                                  (isDarkMode
+                                      ? isDisabled
+                                          ? ChatifyColors.white.withOpacity(0.5)
+                                          : ChatifyColors.white
+                                      : bgColor != null
+                                          ? ChatifyColors.activeColor
+                                          : ChatifyColors.white),
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ),
+                ],
+              ),
       ),
     );
   }

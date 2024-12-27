@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 @AutoRouterConfig()
 class AppRouter extends RootStackRouter {
-
-    @override
+  @override
   RouteType get defaultRouteType => const RouteType.cupertino();
-  
+
   @override
   List<AutoRoute> get routes => [
         /// routes go here
-        AutoRoute(page: LoginRoute.page, initial: true)
+        AutoRoute(page: LoginRoute.page, initial: true),
+        AutoRoute(page: SignUpRoute.page)
       ];
 }
 

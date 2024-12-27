@@ -17,18 +17,19 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  MyApp({super.key});
+  final router = AppRouter();
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Sizer(builder:
         (BuildContext context, Orientation orientation, DeviceType deviceType) {
       return MaterialApp.router(
-        title: 'Flutter Demo',
+        title: 'Chatify',
+        debugShowCheckedModeBanner: false,
         theme: CHatifyTheme.lightMode,
         darkTheme: CHatifyTheme.darkTheme,
-        routerConfig: AppRouter().config(
+        routerConfig: router.config(
           navigatorObservers: () => [MyObserver()],
         ),
       );
